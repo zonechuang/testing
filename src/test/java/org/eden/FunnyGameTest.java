@@ -49,6 +49,10 @@ public class FunnyGameTest {
         position = 59;
         result = FunnyGame.shoutViaModOrContains(position);
         Assert.assertEquals("wrong logic for the number: " + position, "buzz", result);
+
+        position = 15;
+        result = FunnyGame.shoutViaMod(position);
+        Assert.assertEquals("wrong logic for the number: " + position, "FizzBuzz", result);
     }
 
     @Test
@@ -60,5 +64,9 @@ public class FunnyGameTest {
         position = 57;
         result = FunnyGame.shoutViaModOrContains(position);
         Assert.assertNotEquals("wrong logic for the number: " + position, "57", result);
+
+        position = 45;
+        result = FunnyGame.shoutViaModOrContains(position);
+        Assert.assertNotEquals("wrong logic for the number: " + position, "45", result);
     }
 }

@@ -52,7 +52,9 @@ public class FunnyGame {
      * @return
      */
     public static String shoutViaModOrContains(int position) {
-        if (position % 3 == 0 || String.valueOf(position).indexOf("3") != -1) {
+        if (position % 15 == 0) {
+            return "FizzBuzz";
+        } else if (position % 3 == 0 || String.valueOf(position).indexOf("3") != -1) {
             return "fizz";
         } else if (position % 5 == 0 || String.valueOf(position).indexOf("5") != -1) {
             return "buzz";
